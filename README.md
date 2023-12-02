@@ -25,7 +25,7 @@ lbmtau1 contains four versions of kernels:
 - simple scalar reference code (very slow, for reference only),
 - memory copy kernel without computations used for performance comparison.
 
-The version of kernel can be set in ``Makefile`` by setting `OPTIONS` to one of the available values.
+The version of kernel can be set at the beginning of ``Makefile`` by setting `OPTIONS` to one of the available values.
 The manually optimized kernel is used by default.
 
 ### Launching
