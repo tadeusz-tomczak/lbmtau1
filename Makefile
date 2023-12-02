@@ -16,7 +16,7 @@ CLANG = clang $(OPTIONS) $(EXTRA_OPTIONS) -march=native -Ofast -zopt -freciproca
 clang: CPP = $(CLANG)
 clang: main
 
-main: main.cpp LBMTau1Vector3D.hpp
+main: main.cpp LBMTau1.hpp
 	$(CPP) main.cpp -o $@ $(LIBS)
 
 

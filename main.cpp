@@ -8,7 +8,7 @@
 #include <fstream>
 using namespace std;
 
-#include "LBMTau1Vector3D.hpp"
+#include "LBMTau1.hpp"
 
 
 template <class Domain>
