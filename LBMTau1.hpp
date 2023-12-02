@@ -263,7 +263,7 @@ struct LBMTau1Vector3D
 #elif defined KERNEL_VECTORIZED_LOOP
 		iterVectorizedLoop (direction) ;
 #elif defined KERNEL_OPT_MANUAL
-		     if constexpr (3 == L::D  &&  19 == L::Q)
+				 if constexpr (3 == L::D  &&  19 == L::Q)
 		{
 			iterD3Q19 (direction) ;
 		}
@@ -754,7 +754,7 @@ struct LBMTau1Vector3D
 				for (IndexType x=0 ; x < W ; x++)
 				{
 					NodeType nt = t (x,y,z) ;
-					     if (nt.isFluidOnlyFragment()) s.nFluidNodes    ++ ;
+							 if (nt.isFluidOnlyFragment()) s.nFluidNodes    ++ ;
 					else if (nt.isFluid())             s.nBoundaryNodes ++ ;
 					else if (nt.isSolid())             s.nSolidNodes    ++ ;
 				}
@@ -772,7 +772,7 @@ struct LBMTau1Vector3D
 				{
 					const auto ct = getBatchType (xb,y,z) ;
 
-					     if (isBatchFluid (ct))  s.nFluidChunks ++ ;
+							 if (isBatchFluid (ct))  s.nFluidChunks ++ ;
 					else if (isBatchSolid (ct))  s.nSolidChunks ++ ;
 					else if (isBatchMixed (ct)) 
 					{
@@ -994,8 +994,8 @@ iterReference (int direction)
 
 						rn += f;
 						un += L::ex(ik)*f;
-						vn += L::ey(ik)*f;	   
-						xn += L::ez(ik)*f;	   
+						vn += L::ey(ik)*f;
+						xn += L::ez(ik)*f;
 					}
 
 					const T invR = one / rn ;
@@ -1132,7 +1132,7 @@ computeBoundaryBatch
 
 		vr  += f ;
 		vvx += (T)(L::ex(ik))*f;
-		vvy += (T)(L::ey(ik))*f;	   
+		vvy += (T)(L::ey(ik))*f;
 		vvz += (T)(L::ez(ik))*f;	
 		
 		if (-1 == L::ex(k_next))
@@ -1189,8 +1189,8 @@ computeBoundaryBatch
 
 		vr  += f ;
 		vvx += (T)(L::ex(ik))*f;
-		vvy += (T)(L::ey(ik))*f;	   
-		vvz += (T)(L::ez(ik))*f;	   
+		vvy += (T)(L::ey(ik))*f;
+		vvz += (T)(L::ez(ik))*f;
 	}
 
 	V vinvR = (T)(1) / vr ;
@@ -1300,7 +1300,7 @@ computeFluidBatch
 
 		vr  += f ;
 		vvx += (T)(L::ex(ik))*f;
-		vvy += (T)(L::ey(ik))*f;	   
+		vvy += (T)(L::ey(ik))*f;
 		vvz += (T)(L::ez(ik))*f;	
 		
 		if (-1 == L::ex(k_next))
@@ -1346,8 +1346,8 @@ computeFluidBatch
 
 		vr  += f ;
 		vvx += (T)(L::ex(ik))*f;
-		vvy += (T)(L::ey(ik))*f;	   
-		vvz += (T)(L::ez(ik))*f;	   
+		vvy += (T)(L::ey(ik))*f;
+		vvz += (T)(L::ez(ik))*f;
 	}
 
 	V vinvR = (T)(1) / vr ;

@@ -49,7 +49,7 @@ void exportVtk (Domain & d, unsigned stepIdx)
 			{
 				if (d.t (x,y,z).isSolid())
 				{
-        	file << "0 0 0" << endl;
+					file << "0 0 0" << endl;
 				}
 				else
 				{
@@ -81,7 +81,7 @@ void exportVtk (Domain & d, unsigned stepIdx)
 			{
 				if (d.t (x,y,z).isSolid())
 				{
-        	file2 << 0 << endl;
+					file2 << 0 << endl;
 				}
 				else
 				{
@@ -138,8 +138,8 @@ void placeSphericalObstacle
 	if (z0 > rp2) minZ = z0 - rp2 ; else minZ = 0 ;
  
 	for (unsigned x=minX ; x < maxX ; x++)   
-		for (unsigned y=minY ; y < maxY ; y++)   	   	
-			for (unsigned z=minZ ; z < maxZ ; z++)   	   	
+		for (unsigned y=minY ; y < maxY ; y++)
+			for (unsigned z=minZ ; z < maxZ ; z++)
 			{
 				unsigned long long r2 = 
 				 ((x-x0))*(x-x0)+(y-y0)*(y-y0)+(z-z0)*(z-z0) ;
@@ -147,7 +147,7 @@ void placeSphericalObstacle
 				{
 					d.setSolid (x,y,z) ;
 				}
-			}		  
+			}
 }
 
 template <class Domain>
