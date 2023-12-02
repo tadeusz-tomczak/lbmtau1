@@ -249,6 +249,14 @@ int main (int argc, char ** argv)
 	cout << "sizeof (DataType)   = " << sizeof (T) << "\n" ;
 	cout << "latticeArrangement  = D" << L::D << "Q" << L::Q << "\n" ;
 
+	if (0 != (N % d.VSize))
+	{
+		cerr << "ERROR!!! Geometry size MUST be divisible by " << d.VSize 
+				 << " but " << N << " is NOT.\n" ;
+
+		exit (-1) ;
+	}
+
 	cout << "Building geometry...\n" ;
 	buildChannelWithObstacles (d, nObstacles) ;
 	//buildChannelWithMixedChunks (d) ;
