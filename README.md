@@ -5,7 +5,7 @@ lbmtau1 is the high-performance implementation of a recently proposed formulatio
 ## Usage
 
 lbmtau1 is designed as a single C++ header file (``LBMTau1.hpp``).
-It requires clang (tested on AMD clang version 14.0.6).
+It requires `clang` with OpenMP support (tested on AMD clang version 14.0.6).
 Additionally, the example ``main.cpp`` file is provided showing simple simulation setup (channel with randomly placed spherical obstacles) and the appropriate ``Makefile``.
 File ``run_measurements.sh`` is a simple bash script for performance measurements (complete run takes many hours).
 
